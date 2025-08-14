@@ -1,2 +1,8 @@
-# to-dolist
-A simple and responsive To-Do List app built with HTML, CSS, and JavaScript that lets you add, mark, delete tasks, and saves them in local storage.
+## About the Project
+This To-Do List project was created to practice and improve my HTML, CSS, and JavaScript skills.  
+It focuses on DOM manipulation, event handling, and using browser local storage to save data.  
+Through this project, I learned how to:
+- Dynamically create and update HTML elements with JavaScript.
+- Use CSS for responsive and clean UI design.
+- Store and retrieve data from `localStorage`.
+
