@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* height and width inculde padding and border */
+}
+
+.container{
+    width: 100%; /* Percentage of the parent size */
+    height: 100vh; /* Viewport height (1vh = 1% of screen height)*/
+    background: linear-gradient(135deg , #153677  , #4e085f);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%; /* Will take full width of container until max-width limit */
+    max-width: 540px; /* Can shrink but won’t grow beyond 500px */
+    background: #fff;
+    margin: 100px auto 20px; /* add outside of box */
+    padding: 40px 30px 70px;  /* add inside the box */
+    border-radius: 10px; /* give curve to div */
+}
+
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center; /*↑   cross axis (vertical)*/
+    justify-content: space-between; /* ↑   cross axis (vertical) */
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1; /* means flex-grow: 1; flex-shrink: 1; flex-basis: 0; */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+/* look after this when you go home so understand the thing in proper way  */
+button{
+    border: none;
+    outline: none; 
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none; /* highlight or select text in an element.*/
+    cursor: pointer;
+    position: relative; /*Stays in normal flow but can be moved relative to its original place.*/
+}
+
+ul li::before{ /*::before is a pseudo-element that lets you insert content before an element’s actual content, without adding extra HTML.*/
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
